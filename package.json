@@ -15,5 +15,8 @@
   "bugs": {
     "url": "https://github.com/Brian-P-Anderson/json-srv-lite/issues"
   },
-  "homepage": "https://github.com/Brian-P-Anderson/json-srv-lite#readme"
+  "homepage": "https://github.com/Brian-P-Anderson/json-srv-lite#readme",
+  "dependencies": {
+    "express": "^4.17.1"
+  }
 }
