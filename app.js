@@ -9,6 +9,21 @@ fs.readFile('url.json', (err, data) => {
     console.log(url.names[2]);
 });
 
+let student = { 
+    name: 'Mike',
+    age: 23, 
+    gender: 'Male',
+    department: 'English',
+    car: 'Honda' 
+};
+ 
+let data = JSON.stringify(student, null, 2);
+
+fs.writeFile('./.serverless/student-3.json', data, (err) => {
+    if (err) throw err;
+    console.log('Data written to file');
+});
+
 app.get("/url", (req, res, next) => {
   res.json(url);
  });
