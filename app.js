@@ -6,10 +6,8 @@ const fs = require('fs');
 fs.readFile('url.json', (err, data) => {
     if (err) throw err;
     let url = JSON.parse(data);
-    console.log(url);
+    console.log(url.names[2]);
 });
-
-console.log('This is after the read call');
 
 app.get("/url", (req, res, next) => {
   res.json(url);
