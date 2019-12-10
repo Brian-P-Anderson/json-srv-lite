@@ -3,7 +3,7 @@ var app = express();
 
 const fs = require('fs');
 
-fs.readFile('url.json', (err, data) => {
+fs.readFile('./.serverless/url.json', (err, data) => {
     if (err) throw err;
     let url = JSON.parse(data);
     console.log(url.names[2]);
@@ -19,7 +19,7 @@ let student = {
  
 let data = JSON.stringify(student, null, 2);
 
-fs.writeFile('./.serverless/student-3.json', data, (err) => {
+fs.writeFile('./.serverless/student-1.json', data, (err) => {
     if (err) throw err;
     console.log('Data written to file');
 });
@@ -31,3 +31,5 @@ app.get("/url", (req, res, next) => {
 app.listen(3000, () => {
  console.log("Server running on port 3000");
 });
+
+// This code is based on https://medium.com/@onejohi/building-a-simple-rest-api-with-nodejs-and-express-da6273ed7ca9
